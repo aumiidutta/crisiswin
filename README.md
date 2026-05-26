@@ -35,7 +35,7 @@ crisiswin/ <br />
 | URL Hash                               | Page              |
 |----------------------------------------|-------------------|
 | `#/`                                   | Home (continents) |
-| `#/acontinent_name`                    | Asia countries    |
+| `#/continent_name`                    | Asia countries    |
 | `#/continent_name/country_name`        | India helplines   |
 | `#/about`                              | About page        |
 | `#/team`                               | Team page         |
