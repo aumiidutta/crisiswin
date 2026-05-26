@@ -17,16 +17,16 @@ Crisistwin is a lightweight, static, browser-based directory of critical emergen
 
 ## Project Structures
 
-crisiswin/
-├── index.html          # SPA shell (all pages rendered here)
-├── style.css           # Global stylesheet
-├── script.js           # Routing + rendering logic
-├── data.js             # All data (continents, countries, helplines, team)
-├── manifest.json       # PWA manifest
-├── sw.js               # Service Worker (offline support)
-├── README.md           # Learn more about the project
-├── CONTRIBUTING.md     #Learn how to contribute
-├── LICENSE.md
+crisiswin/ <br />
+├── index.html          # SPA shell (all pages rendered here) <br />
+├── style.css           # Global stylesheet <br />
+├── script.js           # Routing + rendering logic <br />
+├── data.js             # All data (continents, countries, helplines, team) <br />
+├── manifest.json       # PWA manifest <br />
+├── sw.js               # Service Worker (offline support) <br />
+├── README.md           # Learn more about the project <br />
+├── CONTRIBUTING.md     #Learn how to contribute <br />
+├── LICENSE.md <br />
 └── assets/
 
 
