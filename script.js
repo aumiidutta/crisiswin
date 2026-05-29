@@ -181,7 +181,7 @@
       { key: 'europe',        label: 'Europe',         imgFile: 'europe.jpeg' },
       { key: 'northamerica', label: 'North America',  imgFile: 'northamerica.jpeg' },
       { key: 'southamerica', label: 'South America',  imgFile: 'southamerica.jpeg' },
-      { key: 'oceania',     label: 'Oceania',      imgFile: 'Oceania.png' },
+      { key: 'oceania',     label: 'Oceania',      imgFile: 'oceania.png' },
       { key: 'antarctica',    label: 'Antarctica',     imgFile: 'antarctica.jpeg' }
     ];
 
