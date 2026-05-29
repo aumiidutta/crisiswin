@@ -16,7 +16,9 @@ git branch <feat/country_name>
 ```
 
 
-## Add Helplines
+## Contribute
+
+### Add Helplines
 
 1. Locate the file for contributing
 Navigate to `data.js`
@@ -86,6 +88,22 @@ For example:
 4. Test locally
 - Run the site on local port
 - Check every component is working -> home, countries, helpline page, about, team, search
+
+
+### Verify the data
+
+I have added helplines of several countries and here's how you can help. Please verify the helplines of your country so none of the information remains outdated or incorrect. If it is either of outdated or incorrect, please create an issue with the following template:
+Title: What is the isssue about? <br />
+Description: What do you want to change? <br />
+Note: Please wait for my comment to start working on the PR
+
+
+### Add a new feature
+
+Do you have an idea or a suggestion that you want to apply for this particular site? Please create an issue with the following template:
+Title: Idea <br />
+Description: Briefly describe your idea. <br />
+Note: Please wait for my comment to start working on the PR
 
 
 ## Submit PR

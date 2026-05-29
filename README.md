@@ -34,11 +34,11 @@ crisiswin/ <br />
 
 | URL Hash                               | Page              |
 |----------------------------------------|-------------------|
-| `#/`                                   | Home (continents) |
-| `#/continent_name`                    | Asia countries    |
-| `#/continent_name/country_name`        | India helplines   |
-| `#/about`                              | About page        |
-| `#/team`                               | Team page         |
+| `/`                                   | Home (continents) |
+| `/continent_name`                    | Asia countries    |
+| `/continent_name/country_name`        | India helplines   |
+| `/about`                              | About page        |
+| `/team`                               | Team page         |
 
 
 ## Contribution

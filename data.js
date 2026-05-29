@@ -23,28 +23,28 @@ const CONTINENTS = {
         ]
     },
 
-    NorthAmerica: {
+    northamerica: {
         name: "North America",
         countries: [
             "Antigua and Barbuda","Bahamas","Barbados","Belize","Canada","Costa Rica","Cuba","Dominica","Dominican Republic","El Salvador","Grenada","Guatemala","Haiti","Honduras","Jamaica","Mexico","Nicaragua","Panama","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Trinidad and Tobago","United States"
         ]
     },
 
-    SouthAmerica: {
+    southamerica: {
         name: "South America",
         countries: [
             "Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador","Guyana","Paraguay","Peru","Suriname","Uruguay","Venezuela"
         ]
     },
 
-    Australia: {
-        name: "Australia",
+    oceania: {
+        name: "Oceania",
         countries: [
             "Australia","Fiji","Kiribati","Marshall Islands","Micronesia","Nauru","New Zealand","Palau","Papua New Guinea","Samoa","Solomon Islands","Tonga","Tuvalu","Vanuatu"
         ]
     },
 
-    Antarctica: {
+    antarctica: {
         name: "Antarctica",
         countries: ["Antarctica"]
     }
@@ -333,7 +333,7 @@ const COUNTRY_DETAILS = {
     },
 
 
-    // Australia
+    // Oceania
         "australia": {
         name: "Australia",
         capital: "Canberra",
@@ -571,12 +571,144 @@ const COUNTRY_DETAILS = {
 // ─────────────────────────────────────────────
 const HELPLINES = {
     /* Africa */
+    "algeria": {
+    "Police": "1548",
+    "Ambulance": "14",
+    "Gendarmerie": "1055"
+    },
+
+    "angola": {
+        "Police": "113",
+        "Ambulance": "112/116",
+        "Fire": "115"
+    },
+
+    "benin": {
+        "Police": "117",
+        "Ambulance": "112",
+        "Fire": "118"
+    },
+
+    "botswana": {
+        "Police": "999",
+        "Ambulance": "997",
+        "Fire": "998",
+        "Mobile Emergency": "112"
+    },
+
+    "burkina_faso": {
+        "Police": "17",
+        "Ambulance": "112",
+        "Fire": "18"
+    },
+
+    "cameroon": {
+        "Police": "117",
+        "Ambulance": "1220",
+        "Fire": "118"
+    },
+
+    "cape_verde": {
+        "Emergency": "132",
+        "Ambulance": "130",
+        "Fire": "131"
+    },
+
+    "chad": {
+        "Police": "17",
+        "Fire": "18",
+        "Ambulance": "2251-4242",
+        "Alternate Ambulance": "2251-1237"
+    },
+
+    "comoros": {
+        "Police": "17",
+        "Fire": "18",
+        "Ambulance": "772-03-73"
+    },
+
+    "djibouti": {
+        "Police": "117",
+        "Fire": "118"
+    },
+
+    "eritrea": {
+        "Emergency": "112",
+        "Fire": "118"
+    },
+
+    "eswatini": {
+        "Police": "999",
+        "Ambulance": "977",
+        "Fire": "933"
+    },
+
     "egypt":{
         "Unfied_emergency": "112",
         "Police": "122",
         "Ambulance": "123",
         "Fire": "180",
-        "Tourist Police": "126"
+        "Tourist Police": "126",
+        "Traffic Police": "128"
+    },
+   
+    "equatorial_guinea": {
+        "Police": "114",
+        "Ambulance": "115",
+        "Fire": "112",
+        "Traffic Police": "116"
+    },
+
+    "ethiopia": {
+        "Emergency": "911",
+        "Police": "991",
+        "Ambulance": "907",
+        "Fire": "939",
+        "Traffic Police": "945"
+    },
+
+    "gabon": {
+        "Police": "1730",
+        "Ambulance": "1300",
+        "Fire": "18"
+    },
+
+    "gambia": {
+        "Police": "117",
+        "Ambulance": "116",
+        "Fire": "118",
+        "Emergency": "112",
+        "Electricity Emergency": "124",
+        "Water Emergency": "125"
+    },
+
+    "ghana": {
+        "Emergency": "112",
+        "Police": "191",
+        "Ambulance": "193",
+        "Fire": "192"
+    },
+
+    "guinea": {
+        "Police": "117",
+        "Fire": "18",
+        "Maritime Emergency": "19",
+        "Gendarmerie": "118",
+        "National Gendarmerie": "122"
+    },
+
+    "guinea_bissau": {
+        "Emergency": "112",
+        "Police": "117",
+        "Ambulance": "119",
+        "Fire": "118"
+    },
+
+    "ivory_coast": {
+        "Police": "110",
+        "Gendarmerie": "111",
+        "Ambulance": "185",
+        "Fire": "180"
     },
 
     "kenya": {
@@ -587,12 +719,99 @@ const HELPLINES = {
         "Gender Based Violence": "1195"
     },
 
+    "liberia": {
+        "Emergency": "911"
+    },
+
+    "libya": {
+        "Emergency": "112",
+        "Police": "1515",
+        "Ambulance": "193"
+    },
+
+    "madagascar": {
+        "Police": "117",
+        "Ambulance": "124",
+        "Fire": "118",
+        "Traffic Police": "3600"
+    },
+
+    "malawi": {
+        "Police": "997",
+        "Ambulance": "998",
+        "Fire": "999",
+        "Traffic Police": "990"
+    },
+
+    "mali": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18",
+        "Emergency": "112"
+    },
+
+    "mauritania": {
+        "Police": "117",
+        "Ambulance": "101",
+        "Fire": "118",
+        "Gendarmerie": "116",
+        "Traffic Police": "119"
+    },
+
+    "mauritius": {
+        "Emergency": "112",
+        "Police": "999",
+        "Ambulance": "114",
+        "Fire": "115",
+        "Fire Alternate": "995"
+    },
+
+    "morocco": {
+        "Police": "19",
+        "Ambulance": "15",
+        "Emergency": "112",
+        "Royal Gendarmerie": "177",
+        "Drugs & Alcohol Service": "113",
+        "Racial Discrimination Hotline": "114",
+        "Non Emergency Disturbances": "110"
+    },
+
+    "mozambique": {
+        "Police": "119",
+        "Ambulance": "117",
+        "Fire": "198"
+    },
+
+    "namibia": {
+        "Police": "10 111"
+    },
+
+    "niger": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18"
+    },
+
     "nigeria": {
         "Emergency": "112",
         "Police": "112",
         "Fire": "112",
         "Ambulance": "112",
         "Mental Health": "+234 800 123 4567"
+    },
+
+    "reunion": {
+        "Emergency": "112",
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18"
+    },
+
+    "rwanda": {
+        "Emergency": "112",
+        "Police": "112",
+        "Ambulance": "912",
+        "Traffic Police": "113"
     },
 
     "south_africa": {
@@ -602,17 +821,87 @@ const HELPLINES = {
         "Gender Based Violence": "0800 428 428"
     },
 
+    "sudan": {
+        "Police": "999"
+    },
+
+    "tanzania": {
+        "Emergency": "112",
+        "Police": "999",
+        "Ambulance": "114",
+        "Fire": "115",
+        "Health Centre": "199"
+    },
+
     "togo": {
         "Police": "117",
         "Ambulance & Fire": "118",
         "Fire": "8200"
     },
 
+    "tunisia": {
+        "Police": "197",
+        "Ambulance": "190",
+        "Fire": "198",
+        "National Guard": "193"
+    },
+
+    "uganda": {
+        "Police": "999",
+        "Ambulance": "911",
+        "Fire": "999"
+    },
+
+    "zambia": {
+        "Police": "991",
+        "Ambulance": "992",
+        "Fire": "993",
+        "Emergency": "112"
+    },
+
+    "zimbabwe": {
+        "Police": "995",
+        "Ambulance": "994",
+        "Fire": "993",
+        "Emergency": "112"
+    },
+
 
     /* Asia */
+    "afghanistan": {
+        "Police": "119",
+        "Ambulance": "102",
+        "Fire": "103"
+    },
+
+    "armenia": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Emergency": "112"
+    },
+
+    "azerbaijan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Emergency": "112"
+    },
+
+    "bahrain": {
+        "Emergency": "999",
+        "Traffic Police": "199",
+        "Coast Guard": "994"
+    },
+
     "bangladesh": {
         "Police / Fire / Ambulance": "999",
-        "Women & Child Abuse Prevention": "109"
+        "Women & Child Abuse Prevention": "109",
+        "Anti Corruption Commission": "106",
+        "Agricultural Information": "16123",
+        "Health Services": "16263",
+        "Legal Services": "16430",
+        "National Information Service": "333"
     },
 
     "bhutan": {
@@ -642,31 +931,103 @@ const HELPLINES = {
         "Police": "110",
         "Fire": "119",
         "Ambulance": "120",
-        "Traffic": "122"
+        "Traffic": "122",
+        "Coast Guard": "95110"
+    },
+
+    "georgia": {
+        "Emergency": "112"
+    },
+
+    "hong_kong": {
+        "Emergency": "999",
+        "Mobile Emergency": "112"
     },
 
     "india": {
-        "Emergency": "112",
+        "Unified Emergency": "112",
         "Police": "100",
         "Fire": "101",
         "Ambulance": "102 / 108",
         "Women": "1091 / 181",
         "Child Helpline": "1098",
-        "Cyber Crime": "1930"
+        "Cyber Crime": "1930",
+        "Disaster Management": "104",
+        "Tourist Helpline": "1363",
+        "Gas Leakage": "1906"
     },
 
     "indonesia": {
         "General Emergency": "112",
         "Police": "110",
-        "Ambulance": "118",
-        "Fire": "113"
+        "Ambulance": "118 / 119",
+        "Fire": "113 / 1131", 
+        "Search & Rescue": "115",
+        "Natural Disasters": "129",
+        "Electricity Emergency": "123"
     },
+
+    "iran": {
+        "Police": "110",
+        "Ambulance": "115",
+        "Fire": "125",
+        "Red Crescent": "112",
+        "Road Traffic Information": "141"
+    },
+
+    "iraq": {
+        "Emergency": "112",
+        "Police": "104",
+        "Ambulance": "122",
+        "Fire": "115",
+        "Mobile Emergency": "911"
+    },
+
+    "israel": {
+        "Police": "100",
+        "Ambulance": "101",
+        "Fire": "102",
+        "Electric Corporation": "103",
+        "Home Front Command": "104",
+        "Child Abuse Hotline": "105",
+        "Municipal Hazards": "106",
+        "Police Information": "110",
+        "Emergency": "112"
+    },
+
 
     "japan": {
         "Police": "110",
         "Ambulance & Fire": "119",
         "Marine Emergency": "118",
-        "Japan Helpline": "0570-000-911"
+        "Japan Helpline": "0570-000-911",
+        "Coast Guard": "118",
+        "Emergency Information": "#7119",
+        "Roadside Assistance": "#8139"
+    },
+
+    "jordan": {
+        "Emergency": "911"
+    },
+
+    "kazakhstan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
+    "kuwait": {
+        "Emergency": "112"
+    },
+
+    "kyrgyzstan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
     },
 
     "laos": {
@@ -674,6 +1035,17 @@ const HELPLINES = {
         "Fire": "1190",
         "Ambulance": "1195",
         "Tourist Police": "1192"
+    },
+
+    "lebanon": {
+        "Police": "112",
+        "Ambulance": "140",
+        "Fire": "175"
+    },
+
+    "macau": {
+        "Police": "999",
+        "Emergency": "112"
     },
 
     "malaysia": {
@@ -692,7 +1064,8 @@ const HELPLINES = {
     "mongolia": {
         "Police": "102",
         "Ambulance": "103",
-        "Fire": "101"
+        "Fire": "101",
+        "Emergency": "105"
     },
 
     "myanmar": {
@@ -708,16 +1081,39 @@ const HELPLINES = {
         "Tourist Police": "1144"
     },
 
+    "north_korea": {
+        "Police": "112",
+        "Ambulance": "119",
+        "Fire": "119"
+    },
+
+    "oman": {
+        "Emergency": "9999",
+        "International Emergency": "112"
+    },
+
     "pakistan": {
         "Police": "15",
         "Fire": "16",
-        "Ambulance": "115"
+        "Ambulance": "115",
+        "Rescue Service": "1122"
     },
 
     "philippines": {
         "Police": "117",
         "Fire": "160",
         "Ambulance": "161"
+    },
+
+    "qatar": {
+        "Emergency": "999"
+    },
+
+    "saudi_arabia": {
+        "Police": "999",
+        "Ambulance": "997",
+        "Fire": "998",
+        "Traffic Accidents": "993"
     },
 
     "singapore": {
@@ -735,6 +1131,26 @@ const HELPLINES = {
         "Fire & Ambulance": "110"
     },
 
+    "syria": {
+        "Police": "112",
+        "Ambulance": "110",
+        "Fire": "113"
+    },
+
+    "taiwan": {
+        "Police": "110",
+        "Ambulance": "119",
+        "Fire": "119"
+    },
+
+    "tajikistan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
     "thailand": {
         "Police": "191",
         "Ambulance & Fire": "1669",
@@ -748,14 +1164,46 @@ const HELPLINES = {
         "Gendarmerie": "156"
     },
 
+    "turkmenistan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
+    "united_arab_emirates": {
+        "Police": "999",
+        "Ambulance": "998",
+        "Fire": "997"
+    },
+
+    "uzbekistan": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
     "vietnam": {
         "Police": "113",
         "Fire": "114",
         "Ambulance": "115"
     },
 
+    "yemen": {
+        "Police": "194",
+        "Ambulance": "191",
+        "Fire": "191"
+    },
+
 
     /* Australia */
+    "american_samoa": {
+        "Emergency": "911"
+    },
+
     "australia": {
         "General Emergency": "000",
         "Mobile Emergency": "112",
@@ -769,13 +1217,65 @@ const HELPLINES = {
         "Crime Stoppers": "1800 333 000"
     },
 
+    "christmas_island": {
+        "Emergency": "000"
+    },
+
+    "cocos_keeling_islands": {
+        "Emergency": "000"
+    },
+
+    "cook_islands": {
+        "Police": "999",
+        "Ambulance": "998",
+        "Fire": "996"
+    },
+
+    "federated_states_of_micronesia": {
+        "Emergency": "911"
+    },
+
     "fiji": {
-        "Emergency": "911",
+        "Ambulance": "910",
         "Police": "917",
-        "Fire": "910",
+        "Fire": "911",
         "Disaster Management": "915",
         "Search & Rescue": "915",
         "Crime Stoppers": "919"
+    },
+
+    "french_polynesia": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18",
+        "Emergency": "112"
+    },
+
+    "guam": {
+        "Emergency": "911"
+    },
+
+    "kiribati": {
+        "Police": "192",
+        "Ambulance": "994",
+        "Fire": "193"
+    },
+
+    "marshall_islands": {
+        "Emergency": "911"
+    },
+
+    "nauru": {
+        "Police": "110",
+        "Ambulance": "111",
+        "Fire": "112"
+    },
+
+    "new_caledonia": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18",
+        "Emergency": "112"
     },
 
     "new_zealand": {
@@ -784,19 +1284,114 @@ const HELPLINES = {
         "Lifeline": "0800 543 354"
     },
 
+    "niue": {
+        "Emergency": "999"
+    },
+
+    "norfolk_island": {
+        "Emergency": "000"
+    },
+
+    "northern_mariana_islands": {
+        "Emergency": "911"
+    },
+
+    "palau": {
+        "Emergency": "911"
+    },
+
     "papua_new_guinea": {
         "Police": "112",
         "Ambulance": "111",
         "Fire": "110"
     },
 
+    "samoa": {
+        "Emergency": "999",
+        "Police": "995",
+        "Ambulance": "996",
+        "Fire": "994"
+    },
+
+    "solomon_islands": {
+        "Police": "999",
+        "Ambulance": "911",
+        "Fire": "988"
+    },
+
+    "tokelau": {
+        "Emergency": "111"
+    },
+
+    "tonga": {
+        "Police": "922",
+        "Ambulance": "933",
+        "Fire": "999"
+    },
+
+    "tuvalu": {
+        "Emergency": "911"
+    },
+
+    "vanuatu": {
+        "Police": "111",
+        "Ambulance": "112",
+        "Fire": "113"
+    },
+
+    
+
+
+
+
 
     /* Europe */
+    "albania": {
+        "Police": "129",
+        "Ambulance": "127",
+        "Fire": "128",
+        "Emergency": "112"
+    },
+
+    "andorra": {
+        "Police": "110",
+        "Ambulance": "116",
+        "Fire": "118",
+        "Emergency": "112"
+    },
+
+    "austria": {
+        "Police": "133",
+        "Ambulance": "144",
+        "Fire": "122",
+        "Emergency": "112"
+    },
+
+    "belarus": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
     "belgium": {
         "Emergency": "112",
+        "Ambulance": "100",
         "Police": "101",
         "Fire": "1722",
         "Medical": "1733"
+    },
+
+    "bosnia_and_herzegovina": {
+        "Police": "122",
+        "Ambulance": "124",
+        "Fire": "123",
+        "Emergency": "112"
+    },
+
+    "bulgaria": {
+        "Emergency": "112"
     },
 
     "croatia": {
@@ -805,6 +1400,33 @@ const HELPLINES = {
         "Fire": "193",
         "Medical": "194",
         "Maritime Search & Rescue": "195"
+    },
+
+    "cyprus": {
+        "Police": "112",
+        "Ambulance": "112",
+        "Fire": "112",
+        "Emergency": "112"
+    },
+
+    "czech_republic": {
+        "Police": "158",
+        "Ambulance": "155",
+        "Fire": "150",
+        "Emergency": "112"
+    },
+
+    "denmark": {
+        "Emergency": "112",
+        "Police Non-Emergency": "114"
+    },
+
+    "estonia": {
+        "Emergency": "112"
+    },
+
+    "finland": {
+        "Emergency": "112"
     },
 
     "france": {
@@ -824,7 +1446,25 @@ const HELPLINES = {
     "greece": {
         "Police": "100",
         "Ambulance & Fire": "166",
-        "Fire": "199"
+        "Fire": "199",
+        "Emergency": "112",
+        "Tourist Police": "171"
+    },
+
+    "hungary": {
+        "Police": "107",
+        "Ambulance": "104",
+        "Fire": "105",
+        "Emergency": "112"
+    },
+
+    "iceland": {
+        "Emergency": "112"
+    },
+
+    "ireland": {
+        "Emergency": "112",
+        "Emergency Alternate": "999"
     },
 
     "italy": {
@@ -835,10 +1475,154 @@ const HELPLINES = {
         "Forest Fires": "1515"
     },
 
+    "kosovo": {
+        "Police": "192",
+        "Ambulance": "194",
+        "Fire": "193",
+        "Emergency": "112"
+    },
+
+    "latvia": {
+        "Emergency": "112",
+        "Police": "110",
+        "Ambulance": "113",
+        "Fire": "112"
+    },
+
+    "liechtenstein": {
+        "Police": "117",
+        "Ambulance": "144",
+        "Fire": "118",
+        "Emergency": "112"
+    },
+
+    "lithuania": {
+        "Emergency": "112"
+    },
+
+    "luxembourg": {
+        "Police": "113",
+        "Emergency": "112"
+    },
+
+    "malta": {
+        "Police": "112",
+        "Ambulance": "196",
+        "Fire": "199"
+    },
+
+    "moldova": {
+        "Emergency": "112"
+    },
+
+    "monaco": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18",
+        "Emergency": "112"
+    },
+
+    "montenegro": {
+        "Police": "122",
+        "Ambulance": "124",
+        "Fire": "123",
+        "Emergency": "112"
+    },
+
+    "netherlands": {
+        "Emergency": "112"
+    },
+
+    "north_macedonia": {
+        "Police": "192",
+        "Ambulance": "194",
+        "Fire": "193",
+        "Emergency": "112"
+    },
+
+    "norway": {
+        "Police": "112",
+        "Ambulance": "113",
+        "Fire": "110"
+    },
+
+    "poland": {
+        "Emergency": "112",
+        "Police": "997",
+        "Ambulance": "999",
+        "Fire": "998"
+    },
+
+    "portugal": {
+        "Emergency": "112"
+    },
+
+    "romania": {
+        "Emergency": "112"
+    },
+
+    "russia": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
+    },
+
+    "san_marino": {
+        "Police": "113",
+        "Medical Emergency": "118",
+        "Fire": "115",
+        "Emergency": "112"
+    },
+
+    "serbia": {
+        "Police": "192",
+        "Ambulance": "194",
+        "Fire": "193",
+        "Emergency": "112"
+    },
+
+    "slovakia": {
+        "Police": "158",
+        "Ambulance": "155",
+        "Fire": "150",
+        "Emergency": "112"
+    },
+
+    "slovenia": {
+        "Police": "113",
+        "Ambulance": "112",
+        "Fire": "112",
+        "Emergency": "112"
+    },
+
     "spain": {
         "Police": "112",
         "Ambulance & Fire": "112",
-        "Marine Emergency": "112"
+        "Marine Emergency": "112",
+        "Civil Guard": "062"
+    },
+    
+    "sweden": {
+        "Emergency": "112",
+        "Police Non-Emergency": "11414"
+    },
+
+    "switzerland": {
+        "Police": "117",
+        "Ambulance": "144",
+        "Fire": "118",
+        "Emergency": "112",
+        "Poison Information": "145"
+    },
+
+    "ukraine": {
+        "Police": "102",
+        "Ambulance": "103",
+        "Fire": "101",
+        "Gas Emergency": "104",
+        "Emergency": "112"
     },
 
     "united_kingdom": {
@@ -847,12 +1631,35 @@ const HELPLINES = {
         "Medical Advice": "111"
     },
 
+    "vatican_city": {
+        "Emergency": "112"
+    },
+
 
     /* North America */
+    "antigua_and_barbuda": {
+        "Emergency": "911",
+        "Police": "999",
+        "Ambulance": "911",
+        "Fire": "911"
+    },
+
+    "bahamas": {
+        "Police": "919",
+        "Ambulance": "919",
+        "Fire": "919"
+    },
+
     "barbados": {
         "Police": "211",
         "Fire": "311",
         "Ambulance": "511"
+    },
+
+    "belize": {
+        "Police": "911",
+        "Ambulance": "911",
+        "Fire": "911"
     },
 
     "canada": {
@@ -863,12 +1670,56 @@ const HELPLINES = {
         "Non-Emergency Health Advice": "811"
     },
 
+    "costa_rica": {
+        "Emergency": "911"
+    },
+
+    "cuba": {
+        "Police": "106",
+        "Ambulance": "104",
+        "Fire": "105"
+    },
+
+    "dominica": {
+        "Police": "999",
+        "Ambulance": "999",
+        "Fire": "999"
+    },
+
+    "dominican_republic": {
+        "Emergency": "911"
+    },
+
+    "el_salvador": {
+        "Police": "911",
+        "Ambulance": "132",
+        "Fire": "913"
+    },
+
+    "grenada": {
+        "Police": "911",
+        "Ambulance": "434",
+        "Fire": "911"
+    },
+
     "guatemala": {
         "Emergency": "110",
         "Police": "110",
         "Fire & Ambulance": "122/123",
         "Women's Helpline": "1572",
         "Tourist Assistance": "1500"
+    },
+
+    "haiti": {
+        "Police": "114",
+        "Ambulance": "118",
+        "Fire": "115"
+    },
+
+    "honduras": {
+        "Police": "911",
+        "Ambulance": "195",
+        "Fire": "198"
     },
 
     "jamaica": {
@@ -884,6 +1735,40 @@ const HELPLINES = {
         "Tourist Assistance": "55 5286 7097"
     },
 
+    "nicaragua": {
+        "Police": "118",
+        "Ambulance": "128",
+        "Fire": "115"
+    },
+
+    "panama": {
+        "Emergency": "911"
+    },
+
+    "saint_kitts_and_nevis": {
+        "Police": "911",
+        "Ambulance": "911",
+        "Fire": "911"
+    },
+
+    "saint_lucia": {
+        "Police": "999",
+        "Ambulance": "911",
+        "Fire": "911"
+    },
+
+    "saint_vincent_and_the_grenadines": {
+        "Police": "999",
+        "Ambulance": "999",
+        "Fire": "999"
+    },
+
+    "trinidad_and_tobago": {
+        "Police": "999",
+        "Ambulance": "811",
+        "Fire": "990"
+    },
+
     "united_states": {
         "Emergency": "911",
         "Suicide Crisis": "988",
@@ -896,6 +1781,12 @@ const HELPLINES = {
         "Emergency": "911",
         "Suicide Prevention": "135",
         "Women": "144"
+    },
+
+    "bolivia": {
+        "Police": "110",
+        "Ambulance": "118",
+        "Fire": "119"
     },
 
     "brazil": {
@@ -914,6 +1805,55 @@ const HELPLINES = {
     "colombia": {
         "Emergency": "123",
         "Gender Based Violence": "155"
+    },
+
+    "ecuador": {
+        "Emergency": "911"
+    },
+
+    "french_guiana": {
+        "Police": "17",
+        "Ambulance": "15",
+        "Fire": "18",
+        "Emergency": "112"
+    },
+
+    "guyana": {
+        "Police": "911",
+        "Ambulance": "913",
+        "Fire": "912"
+    },
+
+    "paraguay": {
+        "Emergency": "911",
+        "Police": "911",
+        "Ambulance": "141",
+        "Fire": "132"
+    },
+
+    "peru": {
+        "Police": "105",
+        "Ambulance": "117",
+        "Fire": "116",
+        "Emergency": "911"
+    },
+
+    "suriname": {
+        "Police": "115",
+        "Ambulance": "113",
+        "Fire": "110"
+    },
+
+    "uruguay": {
+        "Emergency": "911",
+        "Fire": "104"
+    },
+
+    "venezuela": {
+        "Emergency": "911",
+        "Police": "171",
+        "Fire": "171",
+        "Civil Protection": "0800-7248451"
     },
 };
 

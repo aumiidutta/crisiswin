@@ -2,7 +2,7 @@
  * script.js — CrisisWin Main Application Logic
  *
  * This file handles:
- *  1. Client-side SPA routing  (hash-based: #/, #/asia, #/asia/india)
+ *  1. Client-side SPA routing  (hash-based: /, /asia, /asia/india)
  *  2. Search bar with autocomplete
  *  3. Home page continent grid rendering
  *  4. Continent page country grid rendering
@@ -16,7 +16,8 @@
 /* ============================================================
    WAIT FOR DOM TO BE READY
    ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
+
+  document.addEventListener('DOMContentLoaded', () => {
 
   /* ──────────────────────────────────────────────────────────
      1. MOBILE NAV TOGGLE
@@ -33,23 +34,40 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => siteNav.classList.remove('open'));
   });
 
+  // Intercept all internal link clicks — navigate without reloading
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href]');
+    if (!anchor) return;
+    const href = anchor.getAttribute('href');
+    // Only intercept internal relative links (starting with /)
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      e.preventDefault();
+      history.pushState({}, '', href);
+      router();
+    }
+  });
+
+
+
+
+
 
   /* ──────────────────────────────────────────────────────────
      2. ROUTER
      Hash-based routing: window.location.hash drives the page
      Supported routes:
-       #/                            → Home (continents)
-       #/about                       → About
-       #/team                        → Team
-       #/{continent}                 → Continent (country list)
-       #/{continent}/{country}       → Country (details + helplines)
+       /                            → Home (continents)
+       /about                       → About
+       /team                        → Team
+       /{continent}                 → Continent (country list)
+       /{continent}/{country}       → Country (details + helplines)
      ────────────────────────────────────────────────────────── */
 
-  function router() {
-    const hash = window.location.hash || '#/';
-    // Normalize: strip leading #
-    const path = hash.replace(/^#/, '') || '/';
-    const parts = path.split('/').filter(Boolean);  // e.g. ['asia', 'india']
+
+
+    function router() {
+        const path = window.location.pathname || '/';
+        const parts = path.split('/').filter(Boolean);
 
     // Hide all sections first
     hideAllPages();
@@ -77,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Listen to hash changes
-  window.addEventListener('hashchange', router);
+  window.addEventListener('popstate', router);
   // Run on first load
   router();
 
@@ -161,9 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
       { key: 'africa',        label: 'Africa',        imgFile: 'africa.jpeg' },
       { key: 'asia',          label: 'Asia',           imgFile: 'asia.jpeg' },
       { key: 'europe',        label: 'Europe',         imgFile: 'europe.jpeg' },
-      { key: 'north-america', label: 'North America',  imgFile: 'northamerica.jpeg' },
-      { key: 'south-america', label: 'South America',  imgFile: 'southamerica.jpeg' },
-      { key: 'australia',     label: 'Australia',      imgFile: 'australia.jpeg' },
+      { key: 'northamerica', label: 'North America',  imgFile: 'northamerica.jpeg' },
+      { key: 'southamerica', label: 'South America',  imgFile: 'southamerica.jpeg' },
+      { key: 'oceania',     label: 'Oceania',      imgFile: 'Oceania.png' },
       { key: 'antarctica',    label: 'Antarctica',     imgFile: 'antarctica.jpeg' }
     ];
 
@@ -172,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     CONTINENT_LIST.forEach((c, i) => {
       const card = document.createElement('a');
       card.className = `continent-card fade-in fade-in-delay-${i % 3 + 1}`;
-      card.href = `#/${c.key}`;
+      card.href = `/${c.key}`;
       if (c.key === 'antarctica') card.classList.add('antarctica');
 
       // Create an <img> tag pointing to the JPEG in the assets folder
@@ -235,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showPage('continent-page');
     showBreadcrumb([
-      { label: 'Home', href: '#/' },
+      { label: 'Home', href: '/' },
       { label: continent.name }
     ]);
 
@@ -249,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const slug = slugify(country);
       const card = document.createElement('a');
       card.className = `country-card fade-in fade-in-delay-${i % 3 + 1}`;
-      card.href = `#/${continentKey}/${slug}`;
+      card.href = `/${continentKey}/${slug}`;   
       card.textContent = country;
       grid.appendChild(card);
     });
@@ -270,8 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showPage('country-page');
     showBreadcrumb([
-      { label: 'Home', href: '#/' },
-      { label: continent.name, href: `#/${continentKey}` },
+      { label: 'Home', href: '/' },
+      { label: continent.name, href: `/${continentKey}` },
       { label: countryName }
     ]);
 
@@ -502,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
       index.push({
         label: cont.name,
         type: 'Continent',
-        href: `#/${key}`
+        href: `/${key}`
       });
 
       // Add countries
@@ -510,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
         index.push({
           label: country,
           type: 'Country',
-          href: `#/${key}/${slugify(country)}`
+          href: `/${key}/${slugify(country)}`
         });
       });
     });
@@ -532,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
           index.push({
             label: stateName,
             type: 'State',
-            href: continentKey ? `#/${continentKey}/${countrySlug}` : `#/`
+            href: continentKey ? `/${continentKey}/${countrySlug}` : `/`
           });
         });
       }
@@ -592,7 +610,9 @@ document.addEventListener('DOMContentLoaded', () => {
         el.className = 'search-item';
         el.innerHTML = `<span>${item.label}</span><span class="tag">${item.type}</span>`;
         el.addEventListener('click', () => {
-          window.location.hash = item.href;
+          // Use History API to navigate without page reload
+          history.pushState({}, '', item.href);
+          router();
           searchInput.value = '';
           closeDropdown();
         });
