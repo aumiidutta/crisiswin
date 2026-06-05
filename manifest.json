@@ -1,0 +1,20 @@
+{
+  "name": "CrisisWin — Helpline Directory",
+  "short_name": "CrisisWin",
+  "description": "Find emergency helplines for any country instantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#0d1b2a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "health", "lifestyle"],
+  "lang": "en"
+}

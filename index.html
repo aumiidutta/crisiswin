@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────── -->
+  <title>CrisisWin</title>
+  <meta name="description" content="CrisisWin contains all sorts of emergency helplines from around the world." />
+  <meta name="theme-color" content="#0d1b2a" />
+  <meta name="author" content="Saumili Dutta" />
+
+  <!-- ── Open Graph / Social ───────────────────────────────── -->
+  <meta property="og:title" content="CrisisWin — Helplines Directory" />
+  <meta property="og:description" content="Find emergency helplines for any country instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://crisiswin.vercel.app" />
+
+  <!-- ── PWA Manifest ──────────────────────────────────────── -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+
+  <!-- ── Favicon ───────────────────────────────────────────── -->
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <!-- ── Stylesheet ────────────────────────────────────────── -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+
+<body>
+  <!-- ════════════════════════════════════════════════════════
+       FIXED HEADER
+       ════════════════════════════════════════════════════════ -->
+    
+    <header id="site-header" role="banner">
+
+    <!-- Logo (left) -->
+    <a href="/">
+      <img id="header-logo" src="assets/logo.png" alt="CrisisWin Logo" />
+    </a>
+
+    <!-- Mobile hamburger toggle -->
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <!-- Nav links (center) -->
+    <nav id="site-nav" role="navigation" aria-label="Nav bar">
+      <a class="nav-link" href="/"      data-page="home">Home</a>
+      <a class="nav-link" href="/about" data-page="about">About</a>
+      <a class="nav-link" href="/team"  data-page="team">Team</a>
+    </nav>
+
+    <!-- Search bar (right) -->
+    <div id="search-wrapper" role="search">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search country or state…"
+        aria-label="Search countries and states"
+        autocomplete="off"
+      />
+
+      <button id="search-btn" aria-label="Search">
+        <!-- Search icon (SVG inline for performance) -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+      <!-- Autocomplete dropdown (populated by script.js) -->
+      <div id="search-dropdown" role="listbox" aria-label="Search suggestions"></div>
+    </div>
+    </header>
+
+
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT — Single Page Application
+       The router in script.js shows/hides .page-section divs
+       based on the URL hash.
+       ════════════════════════════════════════════════════════ -->
+    <main role="main">
+
+    <!-- Breadcrumb (shown on continent / country pages) -->
+    <nav id="breadcrumb" aria-label="Breadcrumb" style="display:none;"></nav>
+
+    <!-- ── PAGE: HOME (continents grid) ──────────────────── -->
+    <section id="home-page" class="page-section page-hidden" aria-label="Continents">
+      <div id="continent-grid" role="list" aria-label="Select a continent">
+        <!-- Cards injected by script.js renderHomePage() -->
+      </div>
+    </section>
+
+    <!-- ── PAGE: CONTINENT (countries grid) ──────────────── -->
+    <section id="continent-page" class="page-section page-hidden" aria-label="Countries">
+      <div id="country-grid" role="list" aria-label="Select a country">
+        <!-- Cards injected by script.js renderContinentPage() -->
+      </div>
+    </section>
+
+    <!-- ── PAGE: COUNTRY (details + helplines) ───────────── -->
+    <section id="country-page" class="page-section page-hidden" aria-label="Country helplines">
+      <!-- Country info row (capital, flag, ISD, currency, languages) -->
+      <div id="country-info" aria-label="Country details">
+        <!-- Populated by script.js renderCountryPage() -->
+      </div>
+
+      <!-- Helplines grid -->
+      <div id="helplines-grid" role="list" aria-label="Emergency helplines">
+        <!-- Populated by script.js renderHelplines() -->
+      </div>
+    </section>
+
+    <!-- ── PAGE: ABOUT ───────────────────────────────────── -->
+    <section id="about-page" class="page-section page-hidden" aria-label="About CrisisWin">
+      <div id="about-page-inner">
+        <!-- Page heading -->
+        <h1 id="about-title">Crisiswin</h1>
+
+        <!-- About description (replace placeholder with real content) -->
+        <p id="about-description">
+          CrisisWin is a free, open-source platform that consolidates emergency helpline numbers from every country in the world into one easy-to-navigate resource. Whether you're new to the neighborhood or a traveller travelling solo or with your pet, in times of crisis, finding the right number quickly can save lives. <br />
+          
+          The platform is community-driven: you can contribute missing or incorrect helpline numbers for a country or state via GitHub. Together we can build the world's most comprehensive and accurate emergency helpline directory. <br /><br />
+
+          <strong>Origin:</strong> I got this project idea when I shifted to a new city and saw a puppy die in front of my eyes and I didn't have the helpline of a vet, I built this project with the belief that no one should ever feel helpless in an emergency just because they don't have the right number at their fingertips.<br />
+          
+          I want this site to include all sorts of helpline - fire, ambulance, police, mental health, domestic violence, animal rescue, tourists, new residents, etc. If you have suggestions for new helpline categories to add, please create a PR for the respective country or state.<br />
+        </p>
+
+        <!-- Logo / illustration area -->
+        <div id="about-logo-wrap">
+          <img
+            id="about-logo-img"
+            src="assets/logo.png"
+            alt="CrisisWin logo"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── PAGE: TEAM ─────────────────────────────────────── -->
+    <section id="team-page" class="page-section page-hidden" aria-label="Team">
+
+      <!-- Maintainers section -->
+      <h2 class="team-section-title">Maintainers</h2>
+      <div id="maintainer-card" aria-live="polite">
+        <!-- Populated by script.js renderTeamPage() via GitHub API -->
+      </div>
+
+      <!-- Contributors section -->
+      <h2 class="team-section-title">Contributors</h2>
+      <div id="contributors-grid" aria-live="polite">
+        <!-- Populated by script.js renderTeamPage() via GitHub API -->
+      </div>
+    </section>
+  </main>
+
+
+
+    <!-- ════════════════════════════════════════════════════════
+       FIXED FOOTER
+       ════════════════════════════════════════════════════════ -->
+    <footer id="site-footer" role="contentinfo">
+
+    <!-- Left column: Logo -->
+    <div>
+      <a href="/">
+        <img id="footer-logo" src="assets/logo.png" alt="CrisisWin" />
+      </a>
+    </div>
+
+    <!-- Center column: Links -->
+    <nav id="footer-links" aria-label="Footer navigation">
+      <a href="mailto:contact@saumilidutta.com">Contact us</a>
+      <a href="https://github.com/aumiidutta/crisiswin/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">How to contribute</a>
+    </nav>
+
+    <!-- Right column: Copyright watermark -->
+    <p id="footer-copy">2025 ©crisiswin</p>
+  </footer>
+
+
+
+  <!-- ════════════════════════════════════════════════════════
+       DATA + SCRIPTS
+       Load data.js first (defines CONTINENTS, HELPLINES, etc.)
+       then script.js which uses those globals.
+       ════════════════════════════════════════════════════════ -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+  <!-- PWA Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.warn('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
